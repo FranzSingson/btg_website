@@ -1,0 +1,238 @@
+/* CSS font for regular text */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+#page_title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  background-color: #8B0000 ;
+  margin: 0;
+  padding: 5px;
+}
+
+body {
+  background-color: skyblue;
+}
+
+#user_money_text, #user_money_value {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+
+#coin_img_id {
+  width: 20px;
+}
+
+.index_btn:hover {
+  box-shadow: 5px 5px 20px darkslategray;
+  background-color: goldenrod;
+  border-color: white;
+}
+
+.index_btn {
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* EVA */
+.buddy_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-270%, -25%);
+  text-align: center;
+}
+
+#buddy_text_id {
+  /* z-index: 1;
+  font-family: 'Rubik', sans-serif;
+  position: absolute;
+  transform: translate(-0%, -500%); */
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+
+}
+
+#buddy_text_id::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
+  border-top: 20px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+#speech_bubble_img_id {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -270%);
+  /* X Positive to the right, Y, Positive down */
+}
+
+/* Grid */
+section {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* background-color:slateblue ; */
+  display: grid;
+  grid-template-columns: repeat(4, 8rem);
+  grid-template-rows: repeat(4, 8rem);
+  flex-wrap: wrap;
+  grid-gap: 0.5rem;
+  perspective: 800px;
+}
+
+
+.hidden, .div_time_id, .div_move_id, .div_level_id, .grid1_hidden, .grid2_hidden, .grid3_hidden {
+  display: none;
+}
+
+#grid1, #grid2, #grid3 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#div2 {
+  /* background-color: yellow; */
+  margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+}
+
+/* Statistics*/
+.stats_class {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  /* font-family: 'Rubik', sans-serif; */
+}
+
+.div_level, #level_span, .div_timer, #time_counter, .div_move, #move_counter {
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  transform: rotateY(deg);
+  /* margin: 5px; */
+}
+
+
+/* Cards */
+.front_face, .back_face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.front_face {
+  transform: rotateY(-180deg);
+}
+
+.back_face {
+  background: olivedrab;
+  /* opacity: 0.5; */
+  backface-visibility: hidden;
+}
+
+.back_face:hover {
+  box-shadow: 5px 5px 20px darkslategray;
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+}
+
+.unclickable,
+.cardMatched {
+  pointer-events: none;
+}
+
+/* Leaderboard */
+.lb_parent_class {
+  /* display: block; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(140%, -40%);
+  text-align: center;
+  background-color: #92486A;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#table_body {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+#lb_heading, th, td {
+  font-family: 'Rubik', sans-serif;
+  padding: 5px;
+  font-size: 25px;
+}
+
+#lb_heading {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+th {
+  font-weight: 700;
+  color: white;
+}
+
+.l1_score_class, .l2_score_class, .l3_score_class, .total_score_class {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 10px;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+}
+
+.total_score_class {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#new_achievement {
+  background-color: yellow;
+}
+/* .card:hover {
+  /* transform: scale(0.9); */
+/* }  */

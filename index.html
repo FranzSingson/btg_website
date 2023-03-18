@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<!-- <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js" async defer></script> -->
+<!-- <script type="module" src="./js/auth0.js" async defer></script> -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Pair</title>
+</head>
+
+<h1 id="page_title">Matching Pair</h1>
+
+<div id="div1">
+    <button class="index_btn" id="btn1">Play Level 1</button>
+    <button class="index_btn hidden" id="btn2">Play Level 2</button>
+    <button class="index_btn hidden" id="btn3">Play Level 3</button>
+    <button class="index_btn hidden" id="btn_cstm">Custom</button>
+
+    <div id="div2">
+        <div class="stats_class">
+            <div class="div_level_id div_level">Level: <span id="level_span"></span></div>
+            <div class="div_time_id div_timer">Time: <span id="time_counter">0:00</span></div>
+            <div class="div_move_id div_move">Moves: <span id="move_counter">0</span></div>
+        </div>
+        <section class = "grid1_hidden" id="grid1">
+        </section>
+        <section class = "grid2_hidden" id="grid2">
+        </section>
+        <section class = "grid3_hidden" id="grid3">
+        </section>
+    </div>
+    
+    <div class="lb_parent_class">
+        <table class="table_class"> <span id="lb_heading">Leaderboard</span>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+          </table>
+    </div>
+</div>
+
+<span id="user_money_text">Your <img id="coin_img_id" src="./resources/coin_img.png" alt="Coin Image">
+
+  
+  : <span id="user_money_value">0</span></span>
+
+
+
+<script src="./js/index.js" type="module"></script>
+<!-- <script src="./js/timeHandler.js"></script> -->
+<script src="./js/leaderBoard.mjs" type="module"></script>
+
+
+</html>
