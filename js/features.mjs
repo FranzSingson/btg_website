@@ -1,10 +1,7 @@
 import { consolationMessages, congratulatoryMessages } from './dataArrays.mjs';
 
 export function createBuddyElem() {
-  const div1 = document.querySelector('#div1');
-
-  const parentDiv = document.createElement('div');
-  parentDiv.classList.add('buddy_div');
+  const parentDiv = document.querySelector('.buddy_div');
 
   const textDiv = document.createElement('div');
   textDiv.classList.add('buddy_text');
@@ -18,8 +15,6 @@ export function createBuddyElem() {
   buddyImg.id = 'budddy_img_id';
 
   parentDiv.append(textDiv, buddyImg);
-
-  div1.appendChild(parentDiv);
 }
 
 export function showConsolationMsg() {

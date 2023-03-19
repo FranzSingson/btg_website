@@ -13,14 +13,17 @@
 </head>
 
 <h1 id="page_title">Matching Pair</h1>
+<span id="user_money_text">Your <img id="coin_img_id" src="./resources/coin_img.png" alt="Coin Image">: <span id="user_money_value">0</span></span>
 
 <div id="div1">
-    <button class="index_btn" id="btn1">Play Level 1</button>
-    <button class="index_btn hidden" id="btn2">Play Level 2</button>
-    <button class="index_btn hidden" id="btn3">Play Level 3</button>
-    <button class="index_btn hidden" id="btn_cstm">Custom</button>
+    <div id="parent_btn" class="child">
+      <button class="index_btn" id="btn1">Play Level 1</button>
+      <button class="index_btn hidden" id="btn2">Play Level 2</button>
+      <button class="index_btn hidden" id="btn3">Play Level 3</button>
+      <button class="index_btn hidden" id="btn_cstm">Custom</button>
+    </div>
 
-    <div id="div2">
+    <div id="div2" class="child">
         <div class="stats_class">
             <div class="div_level_id div_level">Level: <span id="level_span"></span></div>
             <div class="div_time_id div_timer">Time: <span id="time_counter">0:00</span></div>
@@ -34,7 +37,11 @@
         </section>
     </div>
     
-    <div class="lb_parent_class">
+    <div class="buddy_div child">
+
+    </div>
+
+    <div class="lb_parent_class child">
         <table class="table_class"> <span id="lb_heading">Leaderboard</span>
             <thead>
               <tr>
@@ -46,13 +53,6 @@
           </table>
     </div>
 </div>
-
-<span id="user_money_text">Your <img id="coin_img_id" src="./resources/coin_img.png" alt="Coin Image">
-
-  
-  : <span id="user_money_value">0</span></span>
-
-
 
 <script src="./js/index.js" type="module"></script>
 <!-- <script src="./js/timeHandler.js"></script> -->

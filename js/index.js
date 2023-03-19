@@ -19,12 +19,16 @@ const userStatsObj = {};
 let userLevel = 1;
 
 function shuffleArray(arr) {
-  arr.sort(() => Math.random() - 0.5);
+  // arr.sort(() => Math.random() - 0.5);
   return arr;
 }
 
 function createCardDivs(arr, parent) {
   shuffleArray(arr);
+
+  // Select the Section Element
+  // const sectionElem = document.querySelector('#grid1');
+  // console.log(arr);
 
   for (const arrayItem of arr) {
     const cardDiv = document.createElement('div');

@@ -4,16 +4,20 @@
 #page_title {
   font-family: 'Rubik', sans-serif;
   font-size: 2.5rem;
-  font-weight: bolder;
   color: white;
   text-align: center;
   background-color: #8B0000 ;
   margin: 0;
-  padding: 5px;
+  padding: 15px 0px 15px 0px;
+  width: 100%;
 }
 
 body {
   background-color: skyblue;
+}
+
+#user_money_text {
+  padding-bottom: 20px;
 }
 
 #user_money_text, #user_money_value {
@@ -24,6 +28,17 @@ body {
 
 #coin_img_id {
   width: 20px;
+}
+
+/* parent of body divs */
+#div1 {
+  /* background-color: green; */
+  position: relative;
+  height: 80vh;
+}
+
+#parent_btn {
+  z-index: 4;
 }
 
 .index_btn:hover {
@@ -51,13 +66,12 @@ body {
   left: 50%;
   transform: translate(-270%, -25%);
   text-align: center;
+
+  /* background-color: orange; */
+  height: max-content;
 }
 
 #buddy_text_id {
-  /* z-index: 1;
-  font-family: 'Rubik', sans-serif;
-  position: absolute;
-  transform: translate(-0%, -500%); */
   font-family: 'Rubik', sans-serif;
   font-size: 25px;
   font-weight: bold;
@@ -67,11 +81,12 @@ body {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
+  text-align: center;
 
 }
 
 #buddy_text_id::before {
-  content: "";
+  content: " ";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -81,33 +96,32 @@ body {
   border-right: 10px solid transparent;
 }
 
-#speech_bubble_img_id {
-  height: 100px;
-  width: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -270%);
-  /* X Positive to the right, Y, Positive down */
-}
-
 /* Grid */
 section {
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  /* background-color:slateblue ; */
+  /* display: flex; */
+  /* justify-content: center; */
   display: grid;
   grid-template-columns: repeat(4, 8rem);
   grid-template-rows: repeat(4, 8rem);
   flex-wrap: wrap;
   grid-gap: 0.5rem;
   perspective: 800px;
+  /* margin: 0; */
+  /* padding: 0; */
+  width: max-content;
 }
 
 
 .hidden, .div_time_id, .div_move_id, .div_level_id, .grid1_hidden, .grid2_hidden, .grid3_hidden {
   display: none;
+}
+
+#div2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
 }
 
 #grid1, #grid2, #grid3 {
@@ -116,22 +130,11 @@ section {
   border-radius: 5px;
 }
 
-#div2 {
-  /* background-color: yellow; */
-  margin-top: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-}
-
 /* Statistics*/
 .stats_class {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
-  /* font-weight: bold; */
-  /* font-family: 'Rubik', sans-serif; */
 }
 
 .div_level, #level_span, .div_timer, #time_counter, .div_move, #move_counter {
@@ -140,6 +143,8 @@ section {
   font-size: 30px;
 }
 
+
+/* Cards */
 .card {
   position: relative;
   transform-style: preserve-3d;
@@ -149,8 +154,6 @@ section {
   /* margin: 5px; */
 }
 
-
-/* Cards */
 .front_face, .back_face {
   height: 100%;
   width: 100%;
@@ -176,22 +179,24 @@ section {
   transform: rotateY(180deg);
 }
 
-.unclickable,
-.cardMatched {
+.unclickable, .cardMatched {
   pointer-events: none;
 }
 
 /* Leaderboard */
-.lb_parent_class {
-  /* display: block; */
+.lb_parent_class {  
+  /* display: none; */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(140%, -40%);
+
   text-align: center;
+  /* max-width: 240px; */
   background-color: #92486A;
   padding: 20px;
   border-radius: 15px;
+  width: max-content;
 }
 
 #table_body {
@@ -233,6 +238,42 @@ th {
 #new_achievement {
   background-color: yellow;
 }
-/* .card:hover {
-  /* transform: scale(0.9); */
-/* }  */
+
+@media only screen and (max-width: 600px) {
+
+  #div1{
+    /* position: relative; */
+  }
+
+  #div2{
+    scale: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-83%, -125%);
+  }
+
+  .index_btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -220%);
+  }
+
+  .lb_parent_class {
+    scale: 0.6;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, 0%);
+  }
+
+  .buddy_div {
+    scale: 0.6;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-150%, -5%);
+
+  }
+}
