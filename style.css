@@ -17,7 +17,8 @@ body {
 }
 
 #user_money_text {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
+  background-color: yellow;
 }
 
 #user_money_text, #user_money_value {
@@ -148,10 +149,9 @@ section {
 .card {
   position: relative;
   transform-style: preserve-3d;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   transform: rotateY(deg);
-  /* margin: 5px; */
 }
 
 .front_face, .back_face {
@@ -166,7 +166,6 @@ section {
 }
 
 .back_face {
-  background: olivedrab;
   /* opacity: 0.5; */
   backface-visibility: hidden;
 }
@@ -245,12 +244,17 @@ th {
     /* position: relative; */
   }
 
+  #user_money_text, #user_money_value {
+    font-size: 1rem;
+    /* background-color: red; */
+  }
+
   #div2{
     scale: 0.6;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-83%, -125%);
+    transform: translate(-85%, -120%);
   }
 
   .index_btn{
@@ -274,6 +278,13 @@ th {
       top: 50%;
       left: 50%;
       transform: translate(-150%, -5%);
+  }
 
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    transform: rotateY(deg);
   }
 }
