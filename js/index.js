@@ -80,7 +80,6 @@ function checkPair(card) {
     if (shownCards[0].firstChild.getAttribute('nameofcard') === shownCards[1].firstChild.getAttribute('nameofcard')) {
       for (const shownCard of shownCards) {
         // console.log('Match');
-        playCorrectSound();
         showCongratulatoryMsg();
         shownCard.classList.add('cardMatched');
         shownCard.classList.remove('checking');
@@ -184,6 +183,8 @@ function checkPair(card) {
           console.log('this is level ' + userLevel);
         }
       }
+      playCorrectSound();
+        console.log("TEET")
 
       userMoneyValue += 10;
       document.querySelector('#user_money_value').textContent = userMoneyValue;

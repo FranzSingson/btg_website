@@ -246,7 +246,7 @@ th {
 
   #user_money_text, #user_money_value {
     font-size: 1rem;
-    /* background-color: red; */
+    background-color: yellow;
   }
 
   #div2{
@@ -254,7 +254,8 @@ th {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-85%, -120%);
+    /* transform: translate(-85%, -120%); */
+    transform: translate(-85%, -100%);
   }
 
   .index_btn{
@@ -269,7 +270,8 @@ th {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-30%, 0%);
+      /* transform: translate(-30%, 0%); */
+      transform: translate(-30%, 40%);
   }
 
   .buddy_div {
@@ -277,7 +279,8 @@ th {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-150%, -5%);
+      /* transform: translate(-150%, -5%); */
+      transform: translate(-150%, 25%);
   }
 
   .card {
