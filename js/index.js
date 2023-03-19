@@ -19,7 +19,7 @@ const userStatsObj = {};
 let userLevel = 1;
 
 function shuffleArray(arr) {
-  // arr.sort(() => Math.random() - 0.5);
+  arr.sort(() => Math.random() - 0.5);
   return arr;
 }
 
@@ -184,7 +184,6 @@ function checkPair(card) {
         }
       }
       playCorrectSound();
-        console.log("TEET")
 
       userMoneyValue += 10;
       document.querySelector('#user_money_value').textContent = userMoneyValue;

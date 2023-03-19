@@ -44,6 +44,7 @@ export function playSound2() {
 export function playFlipCardSound() {
   const beat = new Audio('./resources/flipcard.mp3');
   beat.volume = 0.1;
+  beat.playbackRate = 3;
   beat.play();
 }
 
