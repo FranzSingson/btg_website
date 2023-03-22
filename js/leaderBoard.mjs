@@ -52,8 +52,16 @@ export function scoreCalculator(level, time, moves) {
 
   const scoreSelector = document.querySelector(`.l${level}_score_class`);
 
+  let total = 0;
+  for (let i = 0; i < scoreArr.length; i++) {
+    total += scoreArr[i];
+  }
+
+  document.querySelector('#user_money_value').textContent = total;
+
   scoreSelector.textContent = `Level ${level} score: ${userScore}`;
 }
+
 
 export function scoreChecker() {
   console.log(scoreArr);

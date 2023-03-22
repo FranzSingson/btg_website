@@ -13,7 +13,6 @@ let time = startMinutes * 60;
 
 let recordedTime;
 let setIntID;
-let userMoneyValue = 0;
 
 const userStatsObj = {};
 let userLevel = 1;
@@ -87,7 +86,7 @@ function checkPair(card) {
 
         tempArr.push(tempArrCounter++);
 
-        console.log('this is level ' + userLevel);
+        // console.log('this is level ' + userLevel);
 
         const levelSpan = document.querySelector('#level_span');
         levelSpan.textContent = userLevel;
@@ -107,13 +106,13 @@ function checkPair(card) {
           createScoreLevelDisplay(userLevel);
           scoreCalculator(userLevel, recordedTime, playerMovesCounter);
 
-          console.log(userStatsObj);
+          // console.log(userStatsObj);
           tempArrL1.push(userStatsObj);
 
           localStorage.setItem('userStats', JSON.stringify(tempArrL1));
 
           userLevel = 2;
-          console.log('this is level ' + userLevel);
+          // console.log('this is level ' + userLevel);
 
           playSound2();
         // eslint-disable-next-line brace-style
@@ -126,7 +125,6 @@ function checkPair(card) {
           let tempArrL2 = [];
           // Retrieve userStats of Level1
           const userStats = JSON.parse(localStorage.getItem('userStats'));
-
           tempArrL2 = userStats;
 
           // When level 2 is completed before time runs out
@@ -144,21 +142,18 @@ function checkPair(card) {
           localStorage.setItem('userStats', JSON.stringify(tempArrL2));
 
           userLevel = 3;
-          console.log('this is level ' + userLevel);
+          // console.log('this is level ' + userLevel);
           playSound2();
         // eslint-disable-next-line brace-style
         }
 
         /// ///// grid3 to grid4
         else if (tempArr.length > 47 && document.getElementById('grid3') !== null) {
-          console.log('go to final level here');
-          // Run a [FUNCTION] and say this feature is coming
           document.querySelector('#btn_cstm').classList.remove('hidden');
 
           let tempArrL3 = [];
           // Retrieve userStats of Level1
           const userStats = JSON.parse(localStorage.getItem('userStats'));
-
           tempArrL3 = userStats;
 
           // When level 3 is completed before time runs out
@@ -180,13 +175,11 @@ function checkPair(card) {
           localStorage.setItem('userStats', JSON.stringify(tempArrL3));
 
           userLevel = 4;
-          console.log('this is level ' + userLevel);
+          // console.log('this is level ' + userLevel);
         }
       }
       playCorrectSound();
-
-      userMoneyValue += 10;
-      document.querySelector('#user_money_value').textContent = userMoneyValue;
+      
       // This code handles when the pair cards dont match
     } else {
       for (const shownCard of shownCards) {
@@ -326,7 +319,7 @@ function startLevel4() {
   const cstmBtn = document.querySelector('#btn_cstm');
 
   cstmBtn.addEventListener('click', () => {
-    alert('This is a future feature for the game! The game will now return to the homepage.');
+    alert('This is a future feature for the game! REMINDER: Please complete the questionnaire. The game will now return to the homepage.');
     location.reload();
   });
 }
